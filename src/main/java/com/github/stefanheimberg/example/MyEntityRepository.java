@@ -18,7 +18,7 @@ public class MyEntityRepository {
         
         final Root<MyEntity> fromMyEntity = cq.from(MyEntity.class);
         
-        cb.and(cb.equal(fromMyEntity.get(MyEntity_.text), fromMyEntity));
+        cb.and(cb.equal(fromMyEntity.get(MyEntity_.text), text));
         
         return em.createQuery(cq).getResultList();
     }
