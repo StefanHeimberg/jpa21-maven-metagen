@@ -28,15 +28,26 @@
     <profiles>
         <profile>
             <id>hibernate</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
-                <hibernate.version>2.6.1</hibernate.version>
+                <hibernate.version>5.0.3.Final</hibernate.version>
             </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-jpamodelgen</artifactId>
+                    <version>${hibernate.version}</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
         </profile>
         
         <profile>
             <id>eclipselink</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <eclipselink.version>2.6.1</eclipselink.version>
