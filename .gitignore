@@ -8,3 +8,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .idea/
 *.iml
+.settings/
+.project
+.classpath
+/.apt_generated/
